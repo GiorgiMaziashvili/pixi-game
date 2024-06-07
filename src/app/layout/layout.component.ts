@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 import { Application } from 'pixi.js';
+import { Entry } from 'src/canvas/entry';
 import { Animate } from 'src/canvas/games/fast-slot/animation';
 
 @Component({
@@ -18,6 +19,8 @@ export class LayoutComponent implements AfterViewInit, OnDestroy {
       background:'black',
     });
     new Animate();
+    const entry = new Entry(this.app);
+    entry.init();
     this.canvas?.nativeElement.appendChild(this.app.canvas);
   }
 
