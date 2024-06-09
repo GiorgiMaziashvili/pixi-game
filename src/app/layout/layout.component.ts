@@ -1,7 +1,9 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 import { Application } from 'pixi.js';
+import { Animate } from 'src/canvas/common/classes/animation';
+import { PixiClass } from 'src/canvas/common/classes/pixi';
 import { Entry } from 'src/canvas/entry';
-import { Animate } from 'src/canvas/games/fast-slot/animation';
+import { VerticalSlot } from 'src/canvas/games/vertical-slot/initial';
 
 @Component({
   selector: 'app-layout',
@@ -9,22 +11,14 @@ import { Animate } from 'src/canvas/games/fast-slot/animation';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements AfterViewInit, OnDestroy {
-  private app = new Application();
+  private pixiApp = new PixiClass();
   @ViewChild('canvas', { static: true }) canvas?: ElementRef<HTMLCanvasElement>;
   
   async ngAfterViewInit() {
-    await this.app.init({
-      width:422,
-      height:710,
-      background:'black',
-    });
-    new Animate();
-    const entry = new Entry(this.app);
-    entry.init();
-    this.canvas?.nativeElement.appendChild(this.app.canvas);
+    this.pixiApp.init(this.canvas?.nativeElement);
   }
 
   ngOnDestroy(): void {
-    this.app.destroy();
+    console.log('destroyed')
   }
 }
