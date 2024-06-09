@@ -3,7 +3,10 @@ import { GeneratorClass } from "./classes/generator";
 
 export class VerticalSlot{
     private _container = new Container();
-    private generator = new GeneratorClass();
+    private generator = new GeneratorClass({
+        reels:3,
+        tiles:5,
+    });
 
     constructor(){
         console.log('VerticalSlot')
@@ -16,6 +19,7 @@ export class VerticalSlot{
     }
 
     init(){
+        this.generator.init();
         this._container.addChild(this.generator.container);
     }
     
