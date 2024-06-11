@@ -1,11 +1,12 @@
-import { BlurFilter, Container } from "pixi.js";
+import { BlurFilter, Container, Ticker } from "pixi.js";
 import { backout, getSprite, lerp } from "src/canvas/utils";
-import { Tween } from "@tweenjs/tween.js";
+import { Easing, Tween } from "@tweenjs/tween.js";
 
 export class Reels{
     public reels:any = [];
     public container = new Container();
     private tweening:any = [];
+    private ticker = Ticker.shared;
     
     createReels(){
         for (let i = 0; i < 3; i++){
@@ -29,32 +30,30 @@ export class Reels{
                 const symbol = getSprite('slot-symbols',(i+1).toString());
                 symbol.x = j * 100;
                 symbol.scale.x = symbol.scale.y = Math.min(100 / symbol.width, 100 / symbol.height);
-                // symbol.x = Math.round((100 - symbol.width) / 2);
                 symbol.y = 0;
                 reel.symbols.push(symbol);
                 rc.addChild(symbol);
             }
             this.reels.push(reel);
         }
+
+        this.container.eventMode = "dynamic"
+        this.container.addEventListener("click",this.startPlay.bind(this))
     }
 
     updateReels(){
         for (let i = 0; i < this.reels?.length; i++){
             const r = this.reels[i];
-            r.blur.blurY = (r.position - r.previousPosition) * 8;
+            const direction = i % 2 === 0 ? 1 : -1;
+            r.blur.blurY = (r.position - r.previousPosition) * 14;
             r.previousPosition = r.position;
 
             for (let j = 0; j < r.symbols.length; j++)
             {
                 const s = r.symbols[j];
-                const prevy = s.y;
-
+                const prevy = s.x;
+                
                 s.x = ((r.position + j) % r.symbols.length) * 100 - 100;
-                if (s.x < 0 && prevy >= 100){
-                    s.texture = getSprite('slot-symbols','5').texture;
-                    // s.scale.y = s.scale.y = Math.min(100 / s.texture.width, 100 / s.texture.height);
-                    s.y = Math.round((100 - s.texture.width) / 2);
-                }
             }
         }
     }
@@ -62,35 +61,35 @@ export class Reels{
     startPlay(){   
         for (let i = 0; i < this.reels?.length; i++){
             const r = this.reels[i];
-            const extra = Math.floor(Math.random() * 3);
-            const target = r.position + 10 + i * 5 + extra;
-            const time = 2500 + i * 600 + extra * 600;
+            const target = r.position + 10;
             this.tweenTo(
                 r,
                 'position',
                 target,
-                time, 
+                4000,
                 backout(0.5),
-                null,
-                i === this.reels.length - 1 ? this.reelsComplete : null);
+                i,
+                i === this.reels.length - 1 ? this.reelsComplete : null).start();
         }
     }
 
-    tweenTo(object:any, property:any, target:any, time:any, easing:any, onchange:any, oncomplete:any){
-        new Tween(object)
+    tweenTo(object:any, property:any, target:any, time:any, easing:any, index:number, oncomplete:any){
+       return new Tween(object)
         .to({ [property]: target }, time)
-        .easing(easing)
-        .onUpdate(() => {
+        .easing(Easing.Quadratic.InOut)
+        .onUpdate((prop,elapsed) => {
+            console.log(elapsed)
             if (property === 'position') {
                 object[property] = object.position;
             }
         })
+        // .delay(50*index)
         .onComplete(this.reelsComplete)
-        .start();
+        
     }
 
     reelsComplete(){
-        console.log('done')
+        
     }
 
 }

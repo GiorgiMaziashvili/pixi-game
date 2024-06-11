@@ -21,6 +21,7 @@ export class GeneratorClass{
         this._container.addChild(this.reel.container);
 
         this.ticker.add(this.reel.updateReels.bind(this.reel));
-        this.reel.startPlay();
+        (window as any).ticker= this.ticker
+
     }
 }
