@@ -1,5 +1,4 @@
-import { Application, Assets } from "pixi.js";
-import { bundle } from "src/canvas/constants/bundle";
+import { Application } from "pixi.js";
 import { AssetsBase } from "../base";
 import { Animate } from "./animation";
 import { VerticalSlot } from "src/canvas/games/vertical-slot/initial";
@@ -13,11 +12,12 @@ export class PixiClass extends AssetsBase{
 
     init(nativeElement: any){
         this.loadBundle()
-            .then(async ()=>{
+            .then(async (ids:any)=>{
+                console.log(ids)
                 await this._app.init({
                     width:window.innerWidth,
                     height:710,
-                    background:'black',
+                    background:'transparent',
                 });
                 new Animate();
                 (globalThis as any).__PIXI_APP__ = this.app;

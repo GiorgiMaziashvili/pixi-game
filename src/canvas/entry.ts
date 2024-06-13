@@ -11,16 +11,5 @@ export class Entry {
 
     init(){
         this.app?.stage.addChild(this.container);
-        this.test();
-    }
-
-
-    test(){
-        const graphics = new Graphics();
-        graphics.rect(0, 0, 100, 100).fill({color:'red'});;
-        const tween = new Tween(graphics.position);
-        tween.to({x: 400, y: 300}, 1000);
-        tween.start();
-        this.container.addChild(graphics);
     }
 }
