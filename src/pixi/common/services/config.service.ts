@@ -1,14 +1,10 @@
-import { Injectable } from "@angular/core";
-
-class ConfigService {
+class _ConfigService {
     config:any;
 
     async fetchConfig(){
         await fetch('/assets/slot/config.json')
             .then((res) => this.formatData(res))
             .catch(e => console.error(e));
-        
-        console.log(this.config);
     }
 
     private async formatData(res:Response){
@@ -16,4 +12,4 @@ class ConfigService {
     }
 }
 
-export const _ConfigService = new ConfigService();
+export const ConfigService = new _ConfigService();

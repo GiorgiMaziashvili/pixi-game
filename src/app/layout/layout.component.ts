@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
-import { MainPromo } from 'src/pixi/entries/main-promo/main-promo.entry';
+import { MainPromo } from '../../pixi-new/entries/main-promo/main-promo.entry';
 
 @Component({
   selector: 'app-layout',

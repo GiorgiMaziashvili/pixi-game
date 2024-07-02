@@ -7,3 +7,11 @@ export class MainPromo{
         this.canvas.init(nativeElement);
     }
 }
+
+
+
+// config.setPrizes();
+// config.setReels();
+// config.play();
+// config.setResult();
+// config.onComplete();

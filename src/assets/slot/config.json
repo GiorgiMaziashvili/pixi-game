@@ -16,5 +16,22 @@
     "tiles":{
         "width": 100,
         "height": 100
+    },
+    "prizes":{
+        "1": {
+            "symbolId":"4",
+            "sheetId":"spritesheet-1",
+            "glowId":"glow-1"
+        },
+        "2": {
+            "symbolId":"10",
+            "sheetId":"spritesheet-2",
+            "glowId":"glow-2"
+        },
+        "3": {
+            "symbolId":"21",
+            "sheetId":"spritesheet-3",
+            "glowId":"glow-3"
+        }
     }
 }
