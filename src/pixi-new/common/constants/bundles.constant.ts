@@ -7,6 +7,7 @@ export const bundles:IBundle[] = [
     {
         alias: 'slot',
         manifest: {
+            bg: '/assets/slot/bg.jpg',
             symbols: '/assets/slot/slot-symbols.json',
             symbol_1: '/assets/slot/symbols/1.png',
             symbol_2: '/assets/slot/symbols/2.png',

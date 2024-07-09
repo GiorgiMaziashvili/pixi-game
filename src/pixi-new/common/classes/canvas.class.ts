@@ -11,17 +11,21 @@ export class CanvasClass {
         return this._app;
     }
 
-    init(nativeElement?:HTMLCanvasElement,callback?:(app:Application)=>void){
-        this.bundle.load(bundles).then(async(ids:any)=>{
+    init(
+        nativeElement?:HTMLCanvasElement,
+        callback?:(app:Application)=>void
+    ){
+        this.bundle.load(bundles).then(async () => {
             await this._app.init({
                 width:422,
                 height:710,
                 background:0x000000
             });
+
             new Animate();
-            
             nativeElement?.appendChild(this._app.canvas);
             callback?.(this._app);
+            
             (globalThis as any).__PIXI_APP__ = this._app;
         })
     }

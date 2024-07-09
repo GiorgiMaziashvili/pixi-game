@@ -1,6 +1,6 @@
 import { PrizeType } from "../types";
 
-export class ConfigService {
+class ConfigService {
     private _prizes:PrizeType[] = [];
     private _reels:number[] = [];
     private _nextReels:number[] = [];
@@ -9,8 +9,17 @@ export class ConfigService {
         return this._prizes;
     }
 
+    init(options:any){
+        this._reels = options.reels;
+    }
+
     setPrizes(prizes:PrizeType[]) {
         this._prizes = prizes;
     }
 
+    getPrize(){
+        console.log('get prize')
+    }
 }
+
+export const configService = new ConfigService();
