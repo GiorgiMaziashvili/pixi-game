@@ -29,6 +29,5 @@ export class Generator{
     initialConfig(config:any){
         const { reels, prizes } = config || {};
         // this.reel.reelsIndex = reels;
-        
     }
 }

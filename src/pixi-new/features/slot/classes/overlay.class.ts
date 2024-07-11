@@ -1,5 +1,9 @@
+import { Container } from "pixi.js"
+
 export class Overlay {
-    constructor(){
-        console.log('Overlay class')
+    private _container = new Container();
+    
+    public init(){
+        
     }
 }

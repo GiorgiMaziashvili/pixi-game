@@ -1,30 +1,27 @@
 import { Container, Graphics } from "pixi.js";
 import { Reel } from "./reel.class";
 import { optionsService } from "../services";
+import { MaskClass } from "./mask.class";
 
 export class Generator{
     private _container = new Container();
-    private mask = new Graphics();
+    private mask = new MaskClass();
     private reel = new Reel();
 
-    get container(){
+    public get container(){
         return this._container;
     }
 
-    init(){
-        this.renderMask();
+    public init(){
+        this.mask.init();
+        this.reel.init();
+        this.render();
     }
-
-    renderMask(){
-        const { mask } = optionsService.options || {};
-        const { x, y, width, height } = mask || {};
-        
-        this.mask.rect(x, y, width, height).fill({color:'#fff'});
-        this.container.mask = this.mask
-        this.container.addChild(this.mask);
-    }
-
-    render(){
-
+   
+    private render(){
+        this._container.addChild(
+            this.mask.container,
+            this.reel.container
+        )
     }
 }

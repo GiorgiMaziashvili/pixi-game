@@ -15,6 +15,10 @@ export class CanvasClass {
         nativeElement?:HTMLCanvasElement,
         callback?:(app:Application)=>void
     ){
+        Assets.init({
+            preferences:{preferCreateImageBitmap:false}
+        })
+        
         this.bundle.load(bundles).then(async () => {
             await this._app.init({
                 width:422,

@@ -1,9 +1,8 @@
-import { Tween, Easing, Group } from "@tweenjs/tween.js";
+import { Tween, Easing } from "@tweenjs/tween.js";
 import { Container, Ticker, BlurFilter } from "pixi.js";
 import { backout, getSprite } from "../utils";
 import { ConfigService } from "../services/config.service";
 import { TilesBase } from "./tiles.base";
-import { REELS_INDEX, NEXT_REELS_INDEX } from "../constants/MOCK.constant";
 
 export class ReelBase extends TilesBase{
     private readonly configService = ConfigService;
@@ -63,7 +62,7 @@ export class ReelBase extends TilesBase{
             for (let j = 0; j < r.symbols.length; j++){
                 const s = r.symbols[j];
                 s.y = ((r.position + j) % r.symbols.length) * 100 - 100;
-                if(s.y < 0) s.texture = getSprite('slot-symbols',(this.reelsIndex[i][j]).toString()).texture;
+                if(s.y < 0) s.texture = getSprite('slot-symbols',(this.reelsIndex[i][j])).texture;
             }
         }
     }
