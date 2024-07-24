@@ -1,5 +1,5 @@
 import { Container } from "pixi.js";
-import { Background, Generator } from "./classes";
+import { Background, Generator, Overlay } from "./classes";
 
 
 export class Slot {

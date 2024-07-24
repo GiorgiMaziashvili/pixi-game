@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
-import { MainPromo } from '../../pixi-new/entries/main-promo/main-promo.entry';
+import { MainEntry } from 'src/games/entries/main.entry';
 
 @Component({
   selector: 'app-layout',
@@ -9,13 +9,13 @@ import { MainPromo } from '../../pixi-new/entries/main-promo/main-promo.entry';
 
 export class LayoutComponent implements AfterViewInit, OnDestroy {
   @ViewChild('canvas', { static: true }) canvas?: ElementRef<HTMLCanvasElement>;
-  private canvasEntry = new MainPromo();
+  private entry = new MainEntry();
   
   async ngAfterViewInit() {
-    this.canvasEntry.init(this.canvas?.nativeElement);
+    this.entry.once(this.canvas?.nativeElement);
   }
 
   ngOnDestroy(): void {
-    console.log('destroyed')
+    this.entry.destroy();
   }
 }

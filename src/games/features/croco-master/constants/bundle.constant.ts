@@ -1,11 +1,7 @@
-export interface IBundle {
-    alias: string;
-    manifest: Record<string, string>;
-}
+import { BundleType } from "src/games/shared/types/bundle.type";
 
-export const bundles:IBundle[] = [
-    {
-        alias: 'slot',
+export const slotBundle:BundleType = {
+        alias: 'master',
         manifest: {
             bg: '/assets/slot/slot-background.png',
             symbols: '/assets/slot/slot-symbols.json',
@@ -21,4 +17,3 @@ export const bundles:IBundle[] = [
             spritesheet_3: '/assets/slot/spritesheet/Green.json',
         }
     }
-]
