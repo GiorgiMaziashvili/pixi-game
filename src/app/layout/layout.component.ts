@@ -1,21 +1,19 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
-import { Application } from 'pixi.js';
-import { Animate } from 'src/canvas/common/classes/animation';
 import { PixiClass } from 'src/canvas/common/classes/pixi';
-import { Entry } from 'src/canvas/entry';
-import { VerticalSlot } from 'src/canvas/games/vertical-slot/initial';
+import { MainEntry } from 'src/pixi/entries/main.entrie';
 
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
+
 export class LayoutComponent implements AfterViewInit, OnDestroy {
-  private pixiApp = new PixiClass();
   @ViewChild('canvas', { static: true }) canvas?: ElementRef<HTMLCanvasElement>;
+  private mainEntry = new MainEntry();
   
   async ngAfterViewInit() {
-    this.pixiApp.init(this.canvas?.nativeElement);
+    this.mainEntry.init(this.canvas?.nativeElement);
   }
 
   ngOnDestroy(): void {
