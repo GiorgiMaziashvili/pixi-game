@@ -1,0 +1,195 @@
+﻿{"frames": {
+
+"jackpot_win0000":
+{
+	"frame": {"x":0,"y":0,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0001":
+{
+	"frame": {"x":245,"y":0,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0002":
+{
+	"frame": {"x":490,"y":0,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0003":
+{
+	"frame": {"x":735,"y":0,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0004":
+{
+	"frame": {"x":980,"y":0,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0005":
+{
+	"frame": {"x":1225,"y":0,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0006":
+{
+	"frame": {"x":1470,"y":0,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0007":
+{
+	"frame": {"x":1715,"y":0,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0008":
+{
+	"frame": {"x":0,"y":407,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0009":
+{
+	"frame": {"x":245,"y":407,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0010":
+{
+	"frame": {"x":490,"y":407,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0011":
+{
+	"frame": {"x":735,"y":407,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0012":
+{
+	"frame": {"x":980,"y":407,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0013":
+{
+	"frame": {"x":1225,"y":407,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0014":
+{
+	"frame": {"x":1470,"y":407,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0015":
+{
+	"frame": {"x":1715,"y":407,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0016":
+{
+	"frame": {"x":0,"y":814,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0017":
+{
+	"frame": {"x":245,"y":814,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0018":
+{
+	"frame": {"x":490,"y":814,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+},
+"jackpot_win0019":
+{
+	"frame": {"x":735,"y":814,"w":245,"h":407},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":245,"h":407},
+	"sourceSize": {"w":245,"h":407}
+}},
+"animations":{
+	"frames": [
+		"jackpot_win0000",
+		"jackpot_win0001",
+		"jackpot_win0002",
+		"jackpot_win0003",
+		"jackpot_win0004",
+		"jackpot_win0005",
+		"jackpot_win0006",
+		"jackpot_win0007",
+		"jackpot_win0008",
+		"jackpot_win0009",
+		"jackpot_win0010",
+		"jackpot_win0011",
+		"jackpot_win0012",
+		"jackpot_win0013",
+		"jackpot_win0014",
+		"jackpot_win0015",
+		"jackpot_win0016",
+		"jackpot_win0017",
+		"jackpot_win0018",
+		"jackpot_win0019"
+	]
+},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "23.0.2.103",
+	"image": "jackpot_win.png",
+	"format": "RGBA8888",
+	"size": {"w":2048,"h":2048},
+	"scale": "1"
+}
+}
